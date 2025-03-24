@@ -21,8 +21,8 @@ jobs:
        - name: Install npm
          run: npm install
 
-       - name: Install Salesforce CLI
-         run: npm install @salesforce/cli --global
+       - name: Install SFDX CLI
+        run: npm install sfdx-cli --global
 
        - name: pring user Information
          run: sf org display user -o ci-org
