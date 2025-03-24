@@ -24,7 +24,7 @@ jobs:
        - name: Install Salesforce CLI
          run: npm install @salesforce/cli --global
 
-       - name: print user Informations
+       - name: pring user Information
          run: sf org display user -o ci-org
 
   clean-up:
