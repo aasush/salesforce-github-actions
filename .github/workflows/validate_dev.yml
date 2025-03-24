@@ -1,0 +1,34 @@
+
+name: Devlopment pipeline By Susmitha Matturi username is sumatt1617@gmail.com
+run-name: ${{ github.actor }} is running the Github Actions 
+## This will run either on push, pull_requests
+
+on: [push, pull_request]
+
+jobs:
+  build-and-deploy: ## Name of the job
+    runs-on: ubuntu-latest ## Github Hosed [Self Hosted]
+    steps:
+       - name: "Printing message"
+         run: echo "my First job"
+       - name: Checkout Code
+         uses: actions/checkout@v4.1.7
+         with:
+           fetch-depth: 0
+       - name: check
+         run: echo "Test"
+
+       - name: Install npm
+         run: npm install
+
+       - name: Install Salesforce CLI
+         run: npm install @salesforce/cli --global
+
+       - name: print user Information
+         run: sf org display --target-org ci-org --verbose
+
+  clean-up:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Ths is a second job"
+        name: "Printing message"
