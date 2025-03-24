@@ -22,7 +22,7 @@ jobs:
          run: npm install sf cli --global
 
        - name: print user Information
-         run: sf org display user -o ci-org
+         run: sf auth web login --set-default --alias ci-org
 
   clean-up:
     runs-on: ubuntu-latest
