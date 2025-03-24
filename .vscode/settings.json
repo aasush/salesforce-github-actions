@@ -4,5 +4,6 @@
     "**/bower_components": true,
     "**/.sfdx": true
   },
-  "docwriter.style": "Auto-detect"
+  "docwriter.style": "Auto-detect",
+  "vlocity.sfdxUsername": "sumatt1617@gmail.com"
 }
