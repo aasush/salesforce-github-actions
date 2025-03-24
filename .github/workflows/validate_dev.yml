@@ -18,9 +18,6 @@ jobs:
        - name: check
          run: echo "Test"
 
-       - name: Install npm
-         run: npm install
-
        - name: Install SFDX CLI
         run: npm install sfdx-cli --global
 
