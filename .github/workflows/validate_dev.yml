@@ -11,18 +11,17 @@ jobs:
     steps:
        - name: "Printing message"
          run: echo "my First job"
+
        - name: Checkout Code
          uses: actions/checkout@v4.1.7
          with:
            fetch-depth: 0
-       - name: check
-         run: echo "Test"
 
        - name: Install SFDX CLI
          run: npm install sf cli --global
 
        - name: print user Information
-         run: sf auth web login --set-default --alias ci-org
+         run: sf org:display --targetusername ci-org
 
   clean-up:
     runs-on: ubuntu-latest
