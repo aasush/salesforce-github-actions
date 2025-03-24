@@ -21,7 +21,7 @@ jobs:
        - name: Install SFDX CLI
          run: npm install sf cli --global
 
-       - name: print user Informations
+       - name: print user Information
          run: sf org display user -o ci-org
 
   clean-up:
