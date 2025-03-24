@@ -25,7 +25,7 @@ jobs:
          run: npm install @salesforce/cli --global
 
        - name: print user Information
-         run: sf org display --target-org ci-org --verbose
+         run: sf org display user -o ci-org
 
   clean-up:
     runs-on: ubuntu-latest
