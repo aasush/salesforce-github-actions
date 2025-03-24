@@ -4,5 +4,5 @@
     "**/bower_components": true,
     "**/.sfdx": true
   },
-  "vlocity.sfdxUsername": "ci-org"
+  "docwriter.style": "Auto-detect"
 }
